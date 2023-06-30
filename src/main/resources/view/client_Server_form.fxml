@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ChatApplication" prefHeight="800.0" prefWidth="430.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.livechatgroup.ClientServerFormController">
+   <children>
+      <TextArea fx:id="txtAreaChat" editable="false" layoutY="150.0" prefHeight="600.0" prefWidth="430.0" />
+      <TextField fx:id="txtChat" layoutX="50.0" layoutY="750.0" onAction="#txtChatOnAction" prefHeight="50.0" prefWidth="280.0" />
+      <ImageView fx:id="imgEmoji" fitHeight="50.0" fitWidth="50.0" layoutY="750.0" onMouseClicked="#imgEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/emojis.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSend" fitHeight="50.0" fitWidth="50.0" layoutX="380.0" layoutY="750.0" onMouseClicked="#imgSendOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/send.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgGallery" fitHeight="50.0" fitWidth="50.0" layoutX="330.0" layoutY="750.0" onMouseClicked="#imgGallaryOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/gallery.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="147.0" prefHeight="44.0" prefWidth="156.0" text="PLAY Tech" textFill="#192a56">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="44.0" prefHeight="44.0" prefWidth="178.0" text="CHAT Room" textFill="#192a56">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/profilepic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="165.0" layoutY="41.0">
+         <image>
+            <Image url="@../img/chat.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblNames" layoutX="14.0" layoutY="116.0" prefHeight="28.0" prefWidth="400.0" />
+      <AnchorPane fx:id="Emoji" layoutY="550.0" onMouseExited="#EmojiExitedOnAction" prefHeight="200.0" prefWidth="430.0" style="-fx-background-color: Black;" visible="false" />
+      <ImageView fx:id="imgMenu" fitHeight="35.0" fitWidth="37.0" layoutX="380.0" layoutY="14.0" onMouseClicked="#imgMenuOnAction">
+         <image>
+            <Image url="@../img/menu.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="vboxMenuBar" layoutX="312.0" layoutY="49.0" onMouseExited="#vboxMenuBarExitedOnAction" prefHeight="52.0" prefWidth="108.0" visible="false">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="108.0" text="Add Members" />
+            <Button fx:id="btnLeave" mnemonicParsing="false" onAction="#btnLeaveOnAction" prefHeight="26.0" prefWidth="108.0" text="Leave Group" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

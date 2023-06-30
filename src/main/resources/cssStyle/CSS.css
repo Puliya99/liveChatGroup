@@ -1,0 +1,7 @@
+/*-root{*/
+/*    -fx-background-image: url('../img/BackgroundChat.jpg');*/
+/*    -fx-background-size: cover;*/
+/*}*/
+.background-text-area .content {
+    -fx-background-color: transparent;
+}
