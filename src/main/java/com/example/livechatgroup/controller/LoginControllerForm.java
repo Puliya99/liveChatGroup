@@ -6,6 +6,7 @@ import com.example.livechatgroup.server.Server;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -35,16 +36,16 @@ public class LoginControllerForm implements Initializable {
                     Client client = new Client(txtUserName.getText());
                     Thread thread = new Thread(client);
                     thread.start();
-                    Stage stage = (Stage) login.getScene().getWindow();
-                    stage.close();
+                }else {
+                    new Alert(Alert.AlertType.INFORMATION, "Invalid Input").show();
                 }
             } else if (UserModel.save(userName)) {
                 if (Pattern.matches("[a-zA-Z\\s]+", txtUserName.getText())) {
                     Client client = new Client(txtUserName.getText());
                     Thread thread = new Thread(client);
                     thread.start();
-                    Stage stage = (Stage) login.getScene().getWindow();
-                    stage.close();
+                }else {
+                    new Alert(Alert.AlertType.INFORMATION, "Invalid Input").show();
                 }
             }
         }catch (IOException e){

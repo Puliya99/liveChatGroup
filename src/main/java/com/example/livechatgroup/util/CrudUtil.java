@@ -1,7 +1,6 @@
 package com.example.livechatgroup.util;
 
 import com.example.livechatgroup.db.DBConnection;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 

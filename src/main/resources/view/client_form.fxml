@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ChatApplication" prefHeight="800.0" prefWidth="430.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.livechatgroup.controller.ClientFormController">
+<AnchorPane fx:id="ChatApplication" prefHeight="800.0" prefWidth="430.0" style="-fx-background-color: #2ecc71;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.livechatgroup.controller.ClientFormController">
    <children>
-      <TextField fx:id="txtChat" layoutX="50.0" layoutY="750.0" onAction="#txtChatOnAction" prefHeight="50.0" prefWidth="280.0" />
+      <TextField fx:id="txtChat" layoutX="50.0" layoutY="750.0" prefHeight="50.0" prefWidth="280.0" />
       <ImageView fx:id="imgEmoji" fitHeight="50.0" fitWidth="50.0" layoutY="750.0" onMouseClicked="#imgEmojiOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/emojis.png" />
@@ -82,7 +82,7 @@
               </rowConstraints>
             </GridPane>
          </children></AnchorPane>
-      <ImageView fitHeight="192.0" fitWidth="178.0" layoutX="-13.0" layoutY="-42.0">
+      <ImageView fitHeight="138.0" fitWidth="169.0" layoutX="-16.0" layoutY="-27.0">
          <image>
             <Image url="@../img/logo.png" />
          </image>

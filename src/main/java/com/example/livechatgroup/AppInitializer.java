@@ -15,5 +15,9 @@ public class AppInitializer extends Application {
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/login_form.fxml"))));
         stage.setTitle("Chat Room");
         stage.show();
+        stage.setOnCloseRequest(windowEvent -> {
+            System.out.println("Server Close");
+            System.exit(0);
+        });
     }
 }

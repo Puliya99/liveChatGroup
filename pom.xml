@@ -19,7 +19,11 @@
       <artifactId>javafx-controls</artifactId>
       <version>19.0.2.1</version>
     </dependency>
-
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.32</version>
+    </dependency>
     <!--dependency for javafx....-->
     <dependency>
       <groupId>org.openjfx</groupId>
